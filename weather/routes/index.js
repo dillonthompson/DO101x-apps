@@ -8,7 +8,7 @@ const UNITS = process.env.UNITS || 'metric';
 /* GET home page. */
 router.get('/', function(req, res) {
   console.log(OWM_API_KEY);
-  res.render('index', { weather: null, err: null });
+  res.render('index', { weather: null, err: null, key: OWM_API_KEY });
 });
 
 router.post('/get_weather', async function (req,res) {
